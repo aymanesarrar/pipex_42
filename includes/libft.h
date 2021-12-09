@@ -6,7 +6,7 @@
 /*   By: aysarrar <aysarrar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:37:02 by aysarrar          #+#    #+#             */
-/*   Updated: 2021/12/09 12:48:39 by aysarrar         ###   ########.fr       */
+/*   Updated: 2021/12/09 14:12:34 by aysarrar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include <fcntl.h>
 # include <stdio.h>
 # include <errno.h>
-typedef struct pipex_s
+
+typedef struct s_pipex
 {
 	int		infile;
 	int		outfile;
@@ -26,7 +27,7 @@ typedef struct pipex_s
 	int		pipe_r;
 	int		dup2_r;
 	int		execve_r;
-}		pipex_t;
+}		t_pipex;
 typedef struct s_list
 {
 	void			*content;
@@ -75,4 +76,9 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+void	parent_process(t_pipex *pipe_list, char *envp[], char *cmd2);
+void	child_process(t_pipex *pipe_list, char *envp[], char *cmd1);
+int		get_path_and_execute(char **cmd, char *envp[]);
+void	handle_errors(char *str);
+char	*get_path(char *envp[]);
 #endif

@@ -37,6 +37,7 @@ SRCS = ft_atoi.c \
        ft_tolower.c \
        ft_toupper.c \
        ft_striteri.c \
+       pipex_utils.c
 
 BONUS_SRCS = ft_lstadd_back.c \
 	   ft_lstadd_front.c \
@@ -82,6 +83,7 @@ OBJS = my_libft/ft_atoi.o \
        my_libft/ft_tolower.o \
        my_libft/ft_toupper.o \
        my_libft/ft_striteri.o \
+       my_libft/pipex_utils.o \
 
 BONUS_OBJS = ft_lstadd_back.o \
 	   ft_lstadd_front.o \
