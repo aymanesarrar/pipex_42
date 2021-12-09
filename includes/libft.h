@@ -6,7 +6,7 @@
 /*   By: aysarrar <aysarrar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:37:02 by aysarrar          #+#    #+#             */
-/*   Updated: 2021/12/09 14:12:34 by aysarrar         ###   ########.fr       */
+/*   Updated: 2021/12/09 15:17:56 by aysarrar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,5 @@ void	child_process(t_pipex *pipe_list, char *envp[], char *cmd1);
 int		get_path_and_execute(char **cmd, char *envp[]);
 void	handle_errors(char *str);
 char	*get_path(char *envp[]);
+void	execute(char *str, char *cmd, char *envp[], char **command);
 #endif

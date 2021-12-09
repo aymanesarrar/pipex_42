@@ -6,7 +6,7 @@
 /*   By: aysarrar <aysarrar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 09:58:26 by aysarrar          #+#    #+#             */
-/*   Updated: 2021/12/09 14:12:34 by aysarrar         ###   ########.fr       */
+/*   Updated: 2021/12/09 17:44:49 by aysarrar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	main(int argc, char **argv, char *envp[])
 	if (!pipe_list)
 		exit(EXIT_FAILURE);
 	pipe_list->infile = open(argv[1], O_RDONLY);
-	pipe_list->outfile = open(argv[4], O_CREAT | O_WRONLY | O_TRUNC, 0677);
+	pipe_list->outfile = open(argv[4], O_CREAT | O_WRONLY | O_TRUNC, 0666);
 	if (pipe_list->infile < 0 || pipe_list->outfile < 0)
 		handle_errors("fd");
 	pipe_list->pipe_r = pipe(pipe_list->fd);
@@ -61,4 +61,6 @@ int	main(int argc, char **argv, char *envp[])
 		child_process(pipe_list, envp, argv[2]);
 	else
 		parent_process(pipe_list, envp, argv[3]);
+	free(pipe_list);
+	return (0);
 }
