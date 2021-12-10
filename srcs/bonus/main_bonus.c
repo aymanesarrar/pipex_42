@@ -6,7 +6,7 @@
 /*   By: aysarrar <aysarrar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 09:58:26 by aysarrar          #+#    #+#             */
-/*   Updated: 2021/12/09 18:35:47 by aysarrar         ###   ########.fr       */
+/*   Updated: 2021/12/09 18:45:12 by aysarrar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,8 @@ int	main(int argc, char **argv, char *envp[])
 	// free(pipe_list);
 	// return (0);
 	//mazal kanfkr
+	t_pipex	*pipe_list;
+	
+	if (argc >= 1 && argc <= 4)
+		handle_errors("invalid arguments");
 }

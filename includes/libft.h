@@ -6,7 +6,7 @@
 /*   By: aysarrar <aysarrar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 18:37:02 by aysarrar          #+#    #+#             */
-/*   Updated: 2021/12/09 17:56:45 by aysarrar         ###   ########.fr       */
+/*   Updated: 2021/12/10 11:39:32 by aysarrar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-void	parent_process(t_pipex *pipe_list, char *envp[], char *cmd2);
+void	second_child_process(t_pipex *pipe_list, char *envp[], char *cmd2);
 void	child_process(t_pipex *pipe_list, char *envp[], char *cmd1);
 int		get_path_and_execute(char **cmd, char *envp[]);
 void	handle_errors(char *str);
